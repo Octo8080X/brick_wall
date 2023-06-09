@@ -53,7 +53,7 @@ export class BrickWallApiValidator {
         throw new Error("No set parameter `brickWallApiPassword`.");
       }
       if (
-        bcrypt.compareSync(
+        !bcrypt.compareSync(
           payload.brickWallApiPassword,
           this.#BRICK_WALL_API_HASHED_PASSWORD!,
         )
