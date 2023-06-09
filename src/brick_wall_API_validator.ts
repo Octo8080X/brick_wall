@@ -33,6 +33,7 @@ export class BrickWallApiValidator {
         await this.init();
       }
       const { headers } = req;
+      console.log(headers);
       const brickWallToken = headers.get("brick-wall-manager");
 
       if (!brickWallToken) {
