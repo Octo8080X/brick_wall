@@ -62,6 +62,7 @@ export class BrickWallApiValidator {
       }
       return true;
     } catch (e) {
+      console.error("///");
       console.error(e);
       return false;
     }
