@@ -33,7 +33,6 @@ export class BrickWallApiValidator {
         await this.init();
       }
       const { headers } = req;
-      console.log(headers);
       const brickWallToken = headers.get("brick-wall-manager");
 
       if (!brickWallToken) {
@@ -62,7 +61,6 @@ export class BrickWallApiValidator {
       }
       return true;
     } catch (e) {
-      console.error("///");
       console.error(e);
       return false;
     }

@@ -44,9 +44,6 @@ export class BrickWall {
 
     app.use(async (ctx, next) => {
       const brickWallApiValidator = new BrickWallApiValidator();
-      
-      console.log(ctx.request);
-
       if (await brickWallApiValidator.validate(ctx.request)) {
         await router.allowedMethods();
         await router.routes()(ctx, next);
